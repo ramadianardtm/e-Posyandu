@@ -6,6 +6,8 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\DashboardBalitaController;
 use App\Http\Controllers\DashboardJadwalController;
 use App\Http\Controllers\DashboardibuHamilController;
+use App\Http\Controllers\DashboardHistoriBalitaController;
+use App\Http\Controllers\DashboardHistoriIbuHamilController;
 use App\Models\Balita;
 
 /*
@@ -68,4 +70,13 @@ Route::resource('/home/jadwals', DashboardJadwalController::class)
 -> middleware('auth');
 
 Route::resource('/home/ibuhamils', DashboardibuHamilController::class)
+-> middleware('auth');
+
+Route::resource('/home/historiibuhamil', DashboardHistoriIbuHamilController::class)
+-> middleware('auth');
+
+Route::resource('/home/historibalita', DashboardHistoriBalitaController::class)
+-> middleware('auth');
+
+Route::resource('balita', DashboardBalitaController::class)
 -> middleware('auth');

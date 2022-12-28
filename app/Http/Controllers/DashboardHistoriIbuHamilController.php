@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Balita;
+use App\Models\HistoriIbuHamil;
 use Illuminate\Http\Request;
 
-class DashboardBalitaController extends Controller
+class DashboardHistoriIbuHamilController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,7 +14,7 @@ class DashboardBalitaController extends Controller
      */
     public function index()
     {
-        return view('dashboard.balitas.index');
+        return view('dashboard.historiibuhamil.index');
     }
 
     /**
@@ -24,8 +24,7 @@ class DashboardBalitaController extends Controller
      */
     public function create()
     {
-        $data=Balita::query()->get();
-        return view('dashboard.historibalita.index',compact('data'));
+        //
     }
 
     /**
@@ -36,26 +35,16 @@ class DashboardBalitaController extends Controller
      */
     public function store(Request $request)
     {
-        Balita::create([
-            'name' => $request->name,
-            'nik' => $request->nik,
-            'nokk' => $request->nokk,
-            'jeniskelamin' => $request->jeniskelamin,
-            'dob' => $request->dob,
-            'address' => $request->address,
-            'namaayah' => $request->namaayah,
-            'namaibu' => $request->namaibu,
-        ]);
-        return redirect()->route("balita.create");
+        //
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Balita  $balita
+     * @param  \App\Models\HistoriIbuHamil  $historiIbuHamil
      * @return \Illuminate\Http\Response
      */
-    public function show(Balita $balita)
+    public function show(HistoriIbuHamil $historiIbuHamil)
     {
         //
     }
@@ -63,10 +52,10 @@ class DashboardBalitaController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Balita  $balita
+     * @param  \App\Models\HistoriIbuHamil  $historiIbuHamil
      * @return \Illuminate\Http\Response
      */
-    public function edit(Balita $balita)
+    public function edit(HistoriIbuHamil $historiIbuHamil)
     {
         //
     }
@@ -75,10 +64,10 @@ class DashboardBalitaController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Balita  $balita
+     * @param  \App\Models\HistoriIbuHamil  $historiIbuHamil
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Balita $balita)
+    public function update(Request $request, HistoriIbuHamil $historiIbuHamil)
     {
         //
     }
@@ -86,10 +75,10 @@ class DashboardBalitaController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Balita  $balita
+     * @param  \App\Models\HistoriIbuHamil  $historiIbuHamil
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Balita $balita)
+    public function destroy(HistoriIbuHamil $historiIbuHamil)
     {
         //
     }

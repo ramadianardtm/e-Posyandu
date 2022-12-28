@@ -20,7 +20,7 @@
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link {{ Request::is('home/balitas') ? 'active' : '' }}" href="/home/balitas">
+                <a class="nav-link {{ Request::is('home/historibalita') ? 'active' : '' }}" href="{{ route('balita.create') }}">
                      <img src="{{ asset('image/5.png') }}" style="width: 18px; height: auto;" alt="">
                     History Pemeriksaan
                 </a>
@@ -38,7 +38,7 @@
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link {{ Request::is('home/balitas') ? 'active' : '' }}" href="/home/balitas">
+                <a class="nav-link {{ Request::is('home/Historyibuhamil') ? 'active' : '' }}" href="/home/historiibuhamil">
                      <img src="{{ asset('image/5.png') }}" style="width: 18px; height: auto;" alt="">
                     History Pemeriksaan
                 </a>

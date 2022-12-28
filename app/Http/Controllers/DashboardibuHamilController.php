@@ -24,7 +24,7 @@ class DashboardibuHamilController extends Controller
      */
     public function create()
     {
-        //
+        return view('dashboard.historibalita.index');
     }
 
     /**

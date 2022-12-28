@@ -15,9 +15,10 @@
                             @csrf
      
                             <div class="form-group">
-                                <label>Nama Balita</label>
+                                <label>Nama</label>
                                 <input type="text" class="form-control" name="name" value="{{ old('name') }}">
                             </div>
+                            
                             <div class="form-group">
                                 <label>NIK</label>
                                 <input type="number" class="form-control" name="nik" value="{{ old('nik') }}">
@@ -28,30 +29,23 @@
                             </div>
                             
                             <div class="form-group">
-                                <label>Jenis Kelamin</label>
-                                <input type="text" class="form-control" name="jeniskelamin" value="{{ old('jeniskelamin') }}">
-                            </div>
-                            <div class="row mb-3">
-                            <a>Masukan laki-laki/perempuan</a>
-                            </div>
-                            
-                            <div class="form-group">
-                                <label>Tanggal Lahir</label>
-                                <input type="date" class="form-control" name="dob" value="{{ old('dob') }}">
-                            </div>
-                            <div class="form-group">
                                 <label>Alamat</label>
                                 <textarea name="address" class="form-control" cols="30" rows="10">{{ old('addres') }}</textarea>
                             </div>
-
+                            
                             <div class="form-group">
-                                <label>Nama Ayah</label>
-                                <input type="text" class="form-control" name="name" value="{{ old('name') }}">
+                                <label>Usia</label>
+                                <input type="text" class="form-control" name="usia" value="{{ old('usia') }}">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label>Nama Suami</label>
+                                <input type="text" class="form-control" name="namasuami" value="{{ old('namasuami') }}">
                             </div>
 
                             <div class="form-group">
-                                <label>Nama Ibu</label>
-                                <input type="text" class="form-control" name="name" value="{{ old('name') }}">
+                                <label>No Hp</label>
+                                <input type="text" class="form-control" name="nohp" value="{{ old('nohp') }}">
                             </div>
 
                             <div class="form-group">

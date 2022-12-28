@@ -15,6 +15,14 @@ return new class extends Migration
     {
         Schema::create('balitas', function (Blueprint $table) {
             $table->id();
+            $table->string('name');
+            $table->string('nik');
+            $table->string('nokk');
+            $table->string('jeniskelamin');
+            $table->date('dob');
+            $table->string('address');
+            $table->string('namaayah');
+            $table->string('namaibu');
             $table->timestamps();
         });
     }
