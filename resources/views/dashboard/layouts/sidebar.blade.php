@@ -32,7 +32,7 @@
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link {{ Request::is('home/ibuhamils') ? 'active' : '' }}" href="/home/ibuhamils">
+                <a class="nav-link {{ Request::is('home/ibuhamils') ? 'active' : '' }}" href="{{ route('ibuhamils.create') }}">
                     <img src="{{ asset('image/3.png') }}" style="width: 18px; height: auto;" alt="">
                     Pendaftaran Ibu Hamil
                 </a>

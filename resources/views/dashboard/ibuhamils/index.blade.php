@@ -11,7 +11,7 @@
                     <div class="card-header">Daftar ibu hamil</div>
      
                     <div class="card-body">
-                        <form method="POST" action="/mahasiswa">
+                        <form method="POST" action="{{ route ('ibuhamils.store') }}">
                             @csrf
      
                             <div class="form-group">

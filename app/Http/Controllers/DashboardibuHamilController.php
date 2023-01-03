@@ -24,7 +24,8 @@ class DashboardibuHamilController extends Controller
      */
     public function create()
     {
-        return view('dashboard.historibalita.index');
+        
+        return view('dashboard.ibuhamils.index');
     }
 
     /**
@@ -35,7 +36,15 @@ class DashboardibuHamilController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        ibuHamil::create([
+            'name' => $request->name,
+            'nik' => $request->nik,
+            'nokk' => $request->nokk,
+            'address' => $request->address,
+            'usia' => $request->usia,
+            'namasuami' => $request->namasuami,
+            'nohp' => $request->nohp,
+        ]);
     }
 
     /**

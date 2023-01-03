@@ -69,7 +69,7 @@ Route::resource('/home/balitas', DashboardBalitaController::class)
 Route::resource('/home/jadwals', DashboardJadwalController::class)
 -> middleware('auth');
 
-Route::resource('/home/ibuhamils', DashboardibuHamilController::class)
+Route::resource('ibuhamils', DashboardibuHamilController::class)
 -> middleware('auth');
 
 Route::resource('/home/historiibuhamil', DashboardHistoriIbuHamilController::class)
