@@ -45,6 +45,7 @@ class DashboardibuHamilController extends Controller
             'namasuami' => $request->namasuami,
             'nohp' => $request->nohp,
         ]);
+        return redirect()->back();
     }
 
     /**
