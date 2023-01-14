@@ -2,14 +2,15 @@
 
 @section('container')
 <style>
-    .btn-edit{
+    .btn-edit {
         background-color: #979797;
         color: #000;
         font-size: 13px;
         border: solid 1px #000;
         border-radius: 4px;
     }
-    .btn-edit:hover{
+
+    .btn-edit:hover {
         background-color: #000;
         color: #fff;
         border: solid 1px #fff;
@@ -37,7 +38,8 @@
             <p>Nama Balita</p>
         </div>
         <div class="col-sm-4">
-            <input type="text" class="form-control" disabled value="{{$bt->name}}">
+            <?php $user_info = App\Models\Balita::find($bt->balita_id); ?>
+            <input type="text" class="form-control" disabled value="{{$user_info->name}}">
         </div>
     </div>
     <div class="row mt-2">
@@ -45,7 +47,6 @@
             <p>Tempat, Tgl Lahir</p>
         </div>
         <div class="col-sm-4">
-            <?php $user_info = App\Models\Balita::find($bt->balita_id); ?>
             <input type="text" class="form-control" disabled value="{{$user_info->dob}}">
         </div>
     </div>

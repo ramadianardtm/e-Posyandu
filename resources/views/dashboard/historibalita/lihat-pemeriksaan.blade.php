@@ -43,7 +43,8 @@
             <p>Nama Balita</p>
         </div>
         <div class="col-sm-4">
-            <input type="text" class="form-control" disabled value="{{$bt->name}}">
+            <?php $user_info = App\Models\Balita::find($bt->balita_id); ?>
+            <input type="text" class="form-control" disabled value="{{$user_info->name}}">
         </div>
     </div>
     <div class="row mt-2">
@@ -51,7 +52,7 @@
             <p>Tempat, Tgl Lahir</p>
         </div>
         <div class="col-sm-4">
-            <?php $user_info = App\Models\Balita::find($bt->balita_id); ?>
+
             <input type="text" class="form-control" disabled value="{{$user_info->dob}}">
         </div>
     </div>
