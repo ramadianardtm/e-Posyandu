@@ -111,7 +111,7 @@ class CrudController extends Controller
         $periksa->catatan = $request->catatan;
         $periksa->save();
 
-        return redirect('/lihat-pemeriksaan/'.$id);    
+        return redirect('/pemeriksaan-balita');    
     }
     public function insertjadwal(Request $request)
     {
