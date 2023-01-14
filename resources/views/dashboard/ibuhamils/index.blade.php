@@ -11,7 +11,7 @@
                     <div class="card-header">Daftar ibu hamil</div>
      
                     <div class="card-body">
-                        <form method="POST" action="{{ route ('ibuhamils.store') }}">
+                        <form method="POST" action="">
                             @csrf
      
                             <div class="form-group">
@@ -49,7 +49,7 @@
                             </div>
 
                             <div class="form-group">
-                                <button class="btn btn-primary">Simpan</button>
+                                <button type="submit" class="btn btn-primary">Simpan</button>
                             </div>
      
                         </form>

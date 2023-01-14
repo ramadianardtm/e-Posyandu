@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Balita;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class DashboardBalitaController extends Controller
 {
@@ -37,7 +38,9 @@ class DashboardBalitaController extends Controller
     public function store(Request $request)
     {
         Balita::create([
+            'id' => (Auth::user()->id),
             'name' => $request->name,
+            'user_id' => (Auth::user()->id),
             'nik' => $request->nik,
             'nokk' => $request->nokk,
             'jeniskelamin' => $request->jeniskelamin,
@@ -46,7 +49,7 @@ class DashboardBalitaController extends Controller
             'namaayah' => $request->namaayah,
             'namaibu' => $request->namaibu,
         ]);
-        return redirect()->route("balita.create");
+        return redirect('/home');
     }
 
     /**

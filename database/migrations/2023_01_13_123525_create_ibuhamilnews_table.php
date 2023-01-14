@@ -13,17 +13,15 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('balitas', function (Blueprint $table) {
+        Schema::create('ibuhamilnews', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('user_id')->references('id')->on('users')->cascadeOnUpdate()->cascadeOnDelete();
             $table->string('name');
             $table->string('nik');
             $table->string('nokk');
-            $table->string('jeniskelamin');
-            $table->date('dob');
             $table->string('address');
-            $table->string('namaayah');
-            $table->string('namaibu');
+            $table->string('usia');
+            $table->string('namasuami');
+            $table->string('nohp');
             $table->timestamps();
         });
     }
@@ -35,6 +33,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('balitas');
+        Schema::dropIfExists('ibuhamilnews');
     }
 };
